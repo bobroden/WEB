@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Document</title>
+	<link rel="shortcut icon" href="https://avatars.mds.yandex.net/get-zen_doc/1930771/pub_5d25ffe7f0d4f400b007d026_5d26007a8600e100ada87a01/scale_1200" type="image/png">
+	<title>Think!</title>
 </head>
 <body>
 	<header></header>
@@ -13,19 +14,42 @@
 		<section class="aut">
 			<div class="autorisation-container">
 				<h1 class="logo">Think!</h1>
-			    <form class="autorisation" action="" method="post">
+			    <form class="autorisation" action="" method="post" onsubmit="return false">
+			    	<div class="input-container">
+			    		<input type="radio" name="registration" id="registration">
+			    		<label for="registration" class="reg-label">Зарегестрироваться</label>
+			    		<input type="radio" name="registration" id="enter1" checked>
+			    		<label for="enter1" class="ent-label">Войти</label>
+			    	</div>
 				    <label for="login">Login</label>
-				    <input type="text" name="login" class="login" placeholder="Login">
+				    <input type="text" name="login" class="login" placeholder="Login" id="login">
 				    <br>
 				    <label for="password">Password</label>
-				    <input type="password" name="password" class="password" placeholder="Password">
+				    <input type="password" name="password" class="password" placeholder="Password" id="password">
 				    <div class="enter-cont">
 				    	<button class="enter">Enter</button>
 					</div>
 			    </form>
 		    </div>
 		</section>
+		<section class="main-game hidden">
+			<div class="game-container">
+				<div class="canvas">
+					<canvas class="canvas-game" width="200" height="200"></canvas>
+				</div>
+				<div class="interface">
+					<h3>Interface</h3>
+					<p class="discription">Enter the dimensions of the maze. Remember the minimum is 5, maximum 30!</p>
+					<label for="X">X:</label>
+					<input type="number" name="X" id="X" class="X" placeholder="x" min="5" max="30" step="1">
+					<label for="Y">Y:</label>
+					<input type="number" name="Y" id="Y" class="Y" placeholder="y" min="5" max="30" step="1">
+					<span class="help vissible">Enter the correct value!</span>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer></footer>
 </body>
+	<script type="text/javascript" src="script.js"></script>
 </html>

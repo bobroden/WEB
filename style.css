@@ -1,8 +1,12 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: Calibri;
+	font-family: Calibri, ans-serif;;
 	font-size: 10px;
+}
+
+section.hidden {
+	display: none;
 }
 
 .background {
@@ -26,12 +30,11 @@
 	padding: 10px;
 	background: white;
 	margin: auto;
-	width: 50%;
-	max-width: 250px;
+	max-width: 300px;
 	border-radius: 10px;
 }
 
-.autorisation input {
+#login, #password {
 	width: 95%;
 	background-color: #CFF2DF;
 	border: none;
@@ -80,4 +83,98 @@
 	font-size: 4rem;
 	text-align: center;
 	cursor: pointer;
+}
+
+.input-container {
+	display: flex;
+	margin-bottom: 10px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.input-container label {
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+
+label.reg-label {
+	margin-right: 10px;
+	font-size: 1.5rem;
+}
+
+label.ent-label {
+	font-size: 1.5rem;
+}
+
+.input-container input {
+	margin-top: 3px;
+	margin-right: 5px;
+}
+
+.game-container {
+	display: flex;
+	height: 100%;
+	width: calc(100% - 100px);
+	flex-wrap: wrap;
+	padding: 50px;
+	justify-content: space-around;
+}
+
+.canvas, .interface {
+	background: white;
+	border-radius: 10px;
+	border: 5px solid black;
+	padding: 30px;
+	margin-top: 40px;
+}
+
+.interface {
+	max-height: 500px;
+}
+
+.interface label, .interface input {
+	font-size: 1.6rem;
+}
+
+.interface h3 {
+	text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.interface p {
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+}
+
+.interface input {
+	width: 60px;
+	background: #CFF2DF;
+	border: none;
+	border-radius: 5px;
+	padding: 3px;
+	margin-right: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.help {
+    border: 1px solid;
+    border-radius: 5px;
+    background: #F9D2D2;
+    color: #EB1414;
+    padding: 3px;
+    transition: 0.2s;
+    font-size: 1.4rem;
+}
+
+.vissible {
+    opacity: 0;
+}
+
+.canvas-game {
+	border: 3px solid red;
+	border-radius: 5px;
 }
