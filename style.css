@@ -117,7 +117,7 @@ label.ent-label {
 	width: calc(100% - 100px);
 	flex-wrap: wrap;
 	padding: 50px;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .canvas, .interface {
