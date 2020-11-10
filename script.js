@@ -41,21 +41,27 @@ document.querySelector('.X').addEventListener('input', check);
 
 document.querySelector('.Y').addEventListener('input', check);
 
-function Player(x, y) {
+function Player(x, y, a, b) {
   this.x = x;
   this.y = y;
+  this.a = a;
+  this.b = b;
 
   this.Up = function() {
-  	this.y--;
+  	this.b--;
+  	this.y -= 30;
   }
   this.Right = function() {
-  	this.x++;
+  	this.a++;
+  	this.x += 30;
   }
   this.Down = function() {
-  	this.y++;
+  	this.b++;
+  	this.y += 30;
   }
   this.Left = function() {
-  	this.x--;
+  	this.a--;
+  	this.x -= 30;
   }
 }
 
@@ -112,7 +118,7 @@ document.querySelector('.Up').addEventListener('click', () => {
 	clearPlayer(palyer1);
 })
 
-let palyer1 = new Player(0, 0);
+let palyer1 = new Player(0, 0, 0, 0);
 let cell1 = new Cell(true, true, true, false);
 drawCell(cell1, palyer1);
 drawPlayer(palyer1);
