@@ -5,7 +5,7 @@
 	font-size: 10px;
 }
 
-section.hidden {
+section.hidden, .hidden {
 	display: none;
 }
 
@@ -174,7 +174,34 @@ label.ent-label {
     opacity: 0;
 }
 
-.canvas-game {
-	border: 3px solid red;
+.button-container {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.button-container button {
+	margin: 10px;
 	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+	font-size: 2.5rem;
+    margin: 5px auto;
+    appearance: none;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    background: #00c49d;
+    transition: .15s;
+    border-radius: 4px;
+    visibility: visible;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.1), 0 2px 4px 0 rgba(14,30,37,.12);
+    cursor: pointer;
+    border: 0;
+}
+
+.button-container button:hover {
+	background: #00c2b2;
 }

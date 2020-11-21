@@ -11,6 +11,7 @@
 	<header></header>
 	<div class="background"></div>
 	<main>
+		<img src="img/player.png" alt="figure" class="hidden" id="figure" width="30" height="30">
 		<section class="aut">
 			<div class="autorisation-container">
 				<h1 class="logo">Think!</h1>
@@ -34,21 +35,23 @@
 		</section>
 		<section class="main-game hidden">
 			<div class="game-container">
-				<div class="canvas">
-					<canvas class="canvas-game" width="200" height="200"></canvas>
-				</div>
 				<div class="interface">
 					<h3>Interface</h3>
-					<p class="discription">Enter the dimensions of the maze. Remember the minimum is 5, maximum 30!</p>
+					<p class="discription">Enter the dimensions of the maze. Remember the minimum is 5, maximum 30! Then click once on the green area of the maze to select a starting point and start playing.</p>
 					<label for="X">X:</label>
 					<input type="number" name="X" id="X" class="X" placeholder="x" min="5" max="30" step="1">
 					<label for="Y">Y:</label>
 					<input type="number" name="Y" id="Y" class="Y" placeholder="y" min="5" max="30" step="1">
 					<span class="help vissible">Enter the correct value!</span>
-					<button class="Up">Up</button>
-					<button class="Right">Right</button>
-					<button class="Down">Down</button>
-					<button class="Left">Left</button>
+					<div class="button-container">
+						<button class="Up move">Up</button>
+						<button class="Right move">Right</button>
+						<button class="Down move">Down</button>
+						<button class="Left move">Left</button>
+					</div>
+				</div>
+				<div class="canvas">
+					<canvas class="canvas-game" width="200" height="200"></canvas>
 				</div>
 			</div>
 		</section>
