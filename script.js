@@ -6,8 +6,8 @@ let move = 0; // temporarily!!!
 
 
 let cell0 = new Cell(false, false, true, false);
-let cell1 = new Cell(true, true, false, true);
-let cell2 = new Cell(true, true, true, true);
+let cell1 = new Cell(true, false, false, true);
+let cell2 = new Cell(true, false, true, false);
 let cell3 = new Cell(true, false, true, true);
 let cell4 = new Cell(true, true, false, true);
 let cell5 = new Cell(false, true, true, true);
@@ -225,40 +225,48 @@ function startPosition(e) {
 
 document.querySelector('.button-container').addEventListener('click', (e) => { // temporarily!!!
 	if(gaimly && e.target.classList.contains('move')) {
-		if(e.target.classList.contains('Up') && !arrCells[move].top) {
+		if(e.target.classList.contains('Up') && !labMatrix[player.a][player.b].top) {
 			if(labMatrix[player.a][player.b] !== 0) {
 				clearPlayer(player);
 				player.Up();
 				drawPlayer(player);
-				move++;
-				drawCell(arrCells[move], player);
+				if(labMatrix[player.a][player.b] == 0) {
+					move++;
+					drawCell(arrCells[move], player);
+				}
 			}
 		}
-		else if(e.target.classList.contains('Right') && !arrCells[move].right) {
+		else if(e.target.classList.contains('Right') && !labMatrix[player.a][player.b].right) {
 			if(labMatrix[player.a][player.b] !== 0) {
 				clearPlayer(player);
 				player.Right();
 				drawPlayer(player);
-				move++;
-				drawCell(arrCells[move], player);
+				if(labMatrix[player.a][player.b] == 0) {
+					move++;
+					drawCell(arrCells[move], player);
+				}
 			}
 		}
-		else if(e.target.classList.contains('Down') && !arrCells[move].bottom) {
+		else if(e.target.classList.contains('Down') && !labMatrix[player.a][player.b].bottom) {
 			if(labMatrix[player.a][player.b] !== 0) {
 				clearPlayer(player);
 				player.Down();
 				drawPlayer(player);
-				move++;
-				drawCell(arrCells[move], player);
+				if(labMatrix[player.a][player.b] == 0) {
+					move++;
+					drawCell(arrCells[move], player);
+				}
 			}
 		}
-		else if(e.target.classList.contains('Left') && !arrCells[move].left) {
+		else if(e.target.classList.contains('Left') && !labMatrix[player.a][player.b].left) {
 			if(labMatrix[player.a][player.b] !== 0) {
 				clearPlayer(player);
 				player.Left();
 				drawPlayer(player);
-				move++;
-				drawCell(arrCells[move], player);
+				if(labMatrix[player.a][player.b] == 0) {
+					move++;
+					drawCell(arrCells[move], player);
+				}
 			}
 		}
 	}
@@ -266,40 +274,48 @@ document.querySelector('.button-container').addEventListener('click', (e) => { /
 
 document.addEventListener('keypress', (e) => {
 	if(gaimly) {
-		if(e.key === 'w' && !arrCells[move].top) {
+		if(e.key === 'w' && !labMatrix[player.a][player.b].top) {
 			if(labMatrix[player.a][player.b] !== 0) {
 				clearPlayer(player);
 				player.Up();
 				drawPlayer(player);
-				move++;
-				drawCell(arrCells[move], player);
+				if(labMatrix[player.a][player.b] == 0) {
+					move++;
+					drawCell(arrCells[move], player);
+				}
 			}
 		}
-		else if(e.key === 'd' && !arrCells[move].right) {
+		else if(e.key === 'd' && !labMatrix[player.a][player.b].right) {
 			if(labMatrix[player.a][player.b] !== 0) {
 				clearPlayer(player);
 				player.Right();
 				drawPlayer(player);
-				move++;
-				drawCell(arrCells[move], player);
+				if(labMatrix[player.a][player.b] == 0) {
+					move++;
+					drawCell(arrCells[move], player);
+				}
 			}
 		}
-		else if(e.key === 's' && !arrCells[move].bottom) {
+		else if(e.key === 's' && !labMatrix[player.a][player.b].bottom) {
 			if(labMatrix[player.a][player.b] !== 0) {
 				clearPlayer(player);
 				player.Down();
 				drawPlayer(player);
-				move++;
-				drawCell(arrCells[move], player);
+				if(labMatrix[player.a][player.b] == 0) {
+					move++;
+					drawCell(arrCells[move], player);
+				}
 			}
 		}
-		else if(e.key === 'a' && !arrCells[move].left) {
+		else if(e.key === 'a' && !labMatrix[player.a][player.b].left) {
 			if(labMatrix[player.a][player.b] !== 0) {
 				clearPlayer(player);
 				player.Left();
 				drawPlayer(player);
-				move++;
-				drawCell(arrCells[move], player);
+				if(labMatrix[player.a][player.b] == 0) {
+					move++;
+					drawCell(arrCells[move], player);
+				}
 			}
 		}
 	}
