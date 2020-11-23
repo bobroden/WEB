@@ -133,7 +133,7 @@ function drawCell(Cell, Player) {
 		context.moveTo(Player.x + widthCell, Player.y);
 		context.lineTo(Player.x + widthCell, Player.y + widthCell);
 	}
-	if(Cell.bottom && b !== labMatrix[0][0].length) {
+	if(Cell.bottom && b !== labMatrix[0].length - 1) {
 		context.moveTo(Player.x, Player.y + widthCell);
 		context.lineTo(Player.x + widthCell, Player.y + widthCell);
 	}
